@@ -3,7 +3,12 @@ import cv2
 from scipy.ndimage import gaussian_filter
 
 def compute_luminance(image):
-    return np.mean(image, axis=2)
+    # If the image is grayscale, return the image itself as luminance
+    if image.ndim == 2:
+        return image
+    # Otherwise, calculate the mean along the color channel axis
+    else:
+        return np.mean(image, axis=2)
 
 def compute_contrast(image, luminance):
     return np.sqrt(np.mean((image - luminance[:, :, None]) ** 2, axis=2))
