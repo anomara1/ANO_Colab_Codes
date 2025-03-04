@@ -41,8 +41,8 @@ def compute_vsi(image1, image2):
     return vsi_score
 
 # Example usage
-image1 = cv2.imread('image1.jpg', cv2.IMREAD_COLOR)
-image2 = cv2.imread('image2.jpg', cv2.IMREAD_COLOR)
+#image1 = cv2.imread('image1.jpg', cv2.IMREAD_COLOR)
+#image2 = cv2.imread('image2.jpg', cv2.IMREAD_COLOR)
 
-vsi_score = compute_vsi(image1, image2)
-print(f'VSI Score: {vsi_score}')
+#vsi_score = compute_vsi(image1, image2)
+#print(f'VSI Score: {vsi_score}')
