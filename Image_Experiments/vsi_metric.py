@@ -16,7 +16,11 @@ def compute_vsi(image1, image2):
     if len(image1.shape) == 3:
         image1 = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
         image2 = cv2.cvtColor(image2, cv2.COLOR_BGR2GRAY)
-    
+        
+    if len(image1.shape) == 2:  # Grayscale image
+        image1 = np.repeat(image1[:, :, np.newaxis], 3, axis=2)
+        image2 = np.repeat(image2[:, :, np.newaxis], 3, axis=2)
+
     # Apply Gaussian filtering to smooth the images
     image1 = gaussian_filter(image1, sigma=1.5)
     image2 = gaussian_filter(image2, sigma=1.5)
