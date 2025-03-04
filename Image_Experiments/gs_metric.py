@@ -30,8 +30,8 @@ def compute_gradient_similarity(image1, image2):
     return similarity
 
 # Example usage
-image1 = cv2.imread('image1.jpg', cv2.IMREAD_COLOR)
-image2 = cv2.imread('image2.jpg', cv2.IMREAD_COLOR)
+#image1 = cv2.imread('image1.jpg', cv2.IMREAD_COLOR)
+#image2 = cv2.imread('image2.jpg', cv2.IMREAD_COLOR)
 
-similarity = compute_gradient_similarity(image1, image2)
-print(f'Gradient Similarity Score: {similarity}')
+#similarity = compute_gradient_similarity(image1, image2)
+#print(f'Gradient Similarity Score: {similarity}')
